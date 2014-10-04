@@ -22,4 +22,7 @@ end
 group :test, :development do
   gem 'capistrano', '2.12.0'
   gem 'capistrano-rbenv', '1.0.1'
+  gem "rspec-rails", "2.9.0"
+  gem 'factory_girl', '2.6.4'
+  gem 'factory_girl_rails', '1.7.0'
 end
