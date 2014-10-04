@@ -1,5 +1,5 @@
 <aside id="comments">
-  <h2><%= t('title', :scope => 'refinery.blog.posts.show.comments') %></h2>
+  <h2>留言(comment)</h2>
   <% if (comments = @post.comments.approved).any? %>
     <%= render :partial => "comment", :collection => comments %>
   <% else %>
@@ -14,7 +14,7 @@
     </div>
   <% end %>
 
-  <h2><%= t('add', :scope => 'refinery.blog.posts.show.comments') %></h2>
+  <h2>新留言</h2>
   <%= form_for [refinery, :blog, @comment] do |f| %>
     <%= render :partial => "/refinery/admin/error_messages",
                :locals => {
@@ -30,7 +30,7 @@
       <%= f.email_field :email %>
     </div>
     <div class='field message_field'>
-      <%= f.label :message %>
+      <%= f.label :message, "Message: ( http://, https://, href= are spam keywords ) "%>
       <%= f.text_area :message, :rows => 6 %>
     </div>
     <div class='field form-actions'>

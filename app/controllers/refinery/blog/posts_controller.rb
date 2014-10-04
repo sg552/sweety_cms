@@ -35,15 +35,6 @@ module Refinery
 
       def comment
         if (@comment = @post.comments.create(params[:comment])).valid?
-          # don't allow comment
-          #if Comment::Moderation.enabled? or @comment.ham?
-          #  begin
-          #    CommentMailer.notification(@comment, request).deliver
-          #  rescue
-          #    logger.warn "There was an error delivering a blog comment notification.\n#{$!}\n"
-          #  end
-          #end
-
           if Comment::Moderation.enabled?
             flash[:notice] = t('thank_you_moderated', :scope => 'refinery.blog.posts.comments')
             redirect_to refinery.blog_post_url(params[:id])

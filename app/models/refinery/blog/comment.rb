@@ -17,6 +17,12 @@ module Refinery
 
       validates :name, :message, :presence => true
       validates :email, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+      validate :should_not_contain_spam_keywords
+      def should_not_contain_spam_keywords
+        if body.include?('http://') || body.include?('https://') || body.include?('href=')
+          errors.add :body, 'http://, https://, href= are spam keywords..., are you a robot?'
+        end
+      end
 
       class << self
         def unmoderated
@@ -72,6 +78,7 @@ module Refinery
         unless Moderation.enabled?
           comment.state = comment.ham? ? 'approved' : 'rejected'
         end
+
       end
 
       module Moderation

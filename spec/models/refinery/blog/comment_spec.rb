@@ -15,6 +15,13 @@ module Refinery
           comment.post.should_not be_nil
         end
       end
+      it 'should not save if contains spam keywords' do
+        begin
+          comment = FactoryGirl.create(:blog_comment, :body => 'lalala, http://')
+        rescue Exception => e
+          e.class.should == ActiveRecord::RecordInvalid
+        end
+      end
     end
   end
 end
