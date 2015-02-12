@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui-1.8.13.min
+//= require highlight.js
 //= require_tree .

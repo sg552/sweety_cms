@@ -3,6 +3,7 @@
  *= require_self
  *= require style
  *= require style.responsive
+ *= require hightjs_default.css
  *= require customize.css
  */
 
