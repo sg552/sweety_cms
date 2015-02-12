@@ -19,7 +19,9 @@
     <div id="page_container">
 
       <header id="header" class='art-header clearfix'>
-      <%= image_tag asset_path("template/header.png"), :style=> 'width: 100%' %>
+        <div style='background: url(<%= asset_path("template/header.png")%>) no-repeat center center; height: 134px;background-size:100%'>
+        </div>
+      <%# image_tag asset_path("template/header.png"), :style=> 'width: 100%' %>
         <nav class="art-nav clearfix desktop-nav " style='position:relative'>
         <div class="art-nav-inner">
           <ul class="art-hmenu">
