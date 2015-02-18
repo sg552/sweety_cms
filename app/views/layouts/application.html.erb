@@ -12,14 +12,16 @@
       min-height:100%;
   }
   </style>
-  <%= render '/refinery/javascripts' %>
+  <%= render '/refinery/javascripts' if session[:current_user] %>
   <body>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
 
       <header id="header" class='art-header clearfix'>
-      <%= image_tag asset_path("template/header.png"), :style=> 'width: 100%' %>
+        <div style='background: url(<%= asset_path("template/header.png")%>) no-repeat center center; height: 134px;background-size:100%'>
+        </div>
+      <%# image_tag asset_path("template/header.png"), :style=> 'width: 100%' %>
         <nav class="art-nav clearfix desktop-nav " style='position:relative'>
         <div class="art-nav-inner">
           <ul class="art-hmenu">
@@ -43,4 +45,9 @@
        </footer>
     </div>
   </body>
+  <script>
+  $('pre').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+  </script>
 </html>

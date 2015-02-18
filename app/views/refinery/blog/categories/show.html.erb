@@ -32,6 +32,7 @@
 
 <% content_for :body_content_left do %>
   <% if @posts.any? %>
+    <p> 请使用ctrl + F 搜索。本页面总共 120k。(未分页，总共 <%= @posts.size %> 篇文章。) </p>
     <section id="blog_posts">
       <%= will_paginate @posts %>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>

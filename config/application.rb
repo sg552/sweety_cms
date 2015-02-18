@@ -25,7 +25,7 @@ module PersonalSite
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
 
-    config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Asia/Harbin'
 
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
