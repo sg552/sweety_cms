@@ -12,7 +12,7 @@
       min-height:100%;
   }
   </style>
-  <%= render '/refinery/javascripts' if session[:current_user] %>
+  <%= render '/refinery/javascripts' unless is_from_mobile %>
   <body>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
