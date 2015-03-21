@@ -31,8 +31,15 @@
 <% content_for :body_content_title, @category.title %>
 
 <% content_for :body_content_left do %>
+  <%= form_tag '', :method => :get do %>
+    <%= text_field_tag "title", params[:title], :placeholder => '模糊匹配标题,例如:测试', :style => 'max-width: 200px;
+      padding: 4px 0;
+      '  %>
+    <%= submit_tag "搜索", :style => 'height: 28px;
+      width: 53px;' %>
+  <% end %>
   <% if @posts.any? %>
-    <p> 请使用ctrl + F 搜索。本页面总共 120k。(未分页，总共 <%= @posts.size %> 篇文章。) </p>
+    <p>  未分页，总共 <%= @posts.size %> 篇文章。 </p>
     <section id="blog_posts">
       <%= will_paginate @posts %>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
@@ -40,7 +47,7 @@
     </section>
   <% else %>
     <p>
-      <%= t('.no_posts') %>
+    没找到您要搜索的文章
     </p>
   <% end %>
 <% end %>

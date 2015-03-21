@@ -5,7 +5,10 @@ module Refinery
 
       def show
         @category = Refinery::Blog::Category.find(params[:id])
-        @posts = @category.posts.live.includes(:comments, :categories).
+        @posts = @category.posts.
+          where('title like ?', "%#{params[:title]}%").
+          live.
+          includes(:comments, :categories).
           page(params[:page]).per_page(900)
       end
 
