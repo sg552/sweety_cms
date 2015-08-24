@@ -32,14 +32,18 @@
 
 <% content_for :body_content_left do %>
   <%= form_tag '', :method => :get do %>
-    <%= text_field_tag "title", params[:title], :placeholder => '模糊匹配标题,例如:测试', :style => 'max-width: 200px;
+    <%= text_field_tag "title", params[:title], :placeholder => '模糊匹配 全文,例如:测试', :style => 'max-width: 200px;
       padding: 4px 0;
       '  %>
     <%= submit_tag "搜索", :style => 'height: 28px;
       width: 53px;' %>
   <% end %>
   <% if @posts.any? %>
+    <% if params[:title].present? %>
+      <p>  未分页，总共 <%= @posts.size %> 篇标题和<span style="color:red">正文</span>中包含 <span style='color:red'> "<%= params[:title] %>" </span>的文章。 </p>
+    <% else %>
     <p>  未分页，总共 <%= @posts.size %> 篇文章。 </p>
+    <% end %>
     <section id="blog_posts">
       <%= will_paginate @posts %>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
@@ -58,3 +62,6 @@
 
 <%= render :partial => "/refinery/content_page" %>
 <% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
+<script>
+  $('#title').focus();
+</script>
