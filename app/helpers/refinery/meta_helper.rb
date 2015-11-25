@@ -8,7 +8,7 @@ module Refinery
       [
         (yield_title if yield_title.present?),
         @meta.browser_title.present? ? @meta.browser_title : @meta.path,
-        Refinery::Core.site_name
+        SITE_NAME
       ].compact.join(" - ")
     end
 

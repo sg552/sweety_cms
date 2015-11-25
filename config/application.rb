@@ -41,3 +41,5 @@ module PersonalSite
     config.logger = Log4r::Logger[Rails.env]
   end
 end
+
+SITE_NAME = '申思维的技术站点-ruby/rails/titanium/敏捷方法论/测试驱动/自动化/全栈攻城狮/jquery/极客/直男'
