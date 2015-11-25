@@ -5,11 +5,12 @@
 <% end %>
 <article id="blog_post">
   <header>
-    <h1><%= @post.title %></h1>
+    <h1><%= @post.title %> </h1>
     <section class='details'>
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
         <%= @post.published_at.to_datetime.strftime('%Y-%m-%d %H:%M') %>
       </time>
+      <p>访问量: <%= @post.access_count %></p>
       <%# content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
       <% if @post.source_url.present? %>
         <div class='blog_source'>

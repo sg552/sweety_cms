@@ -40,7 +40,9 @@
       <footer class="art-footer clearfix">
       <div class="art-footer-inner">
         <div style="position:relative;display:inline-block;padding-left:35px;padding-right:35px">
-         <p>Copyright © 2014. 申思维的个人站点/ Siwei's Site.</p><br></div>
+          <p>所有文章都欢迎转载, 注明出处即可.</p>
+          <p>总访问量: <%= Refinery::Blog::Post.sum(:access_count) %></p>
+          <p>Copyright © 2014-2016. 申思维的个人站点/ Siwei's Site.</p><br></div>
        </div>
        </footer>
     </div>

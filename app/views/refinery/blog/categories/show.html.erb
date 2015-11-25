@@ -44,6 +44,9 @@
     <% else %>
     <p>  未分页，总共 <%= @posts.size %> 篇文章。 </p>
     <% end %>
+
+    <p>总访问量: <%= Refinery::Blog::Post.sum(:access_count) %>, 标题后面的括号中的内容,是对应文章的访问次数.</p>
+
     <section id="blog_posts">
       <%= will_paginate @posts %>
       <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
