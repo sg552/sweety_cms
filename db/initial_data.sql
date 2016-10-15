@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for Linux (x86_64)
 --
--- Host: localhost    Database: kaikai_blog
+-- Host: localhost    Database: sweety_cms
 -- ------------------------------------------------------
--- Server version	5.5.43-0ubuntu0.14.04.1
+-- Server version	5.7.11-0ubuntu6
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -90,7 +90,7 @@ CREATE TABLE `refinery_blog_comments` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_refinery_blog_comments_on_id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23460 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `refinery_blog_posts` (
   KEY `index_refinery_blog_posts_on_id` (`id`),
   KEY `index_refinery_blog_posts_on_access_count` (`access_count`),
   KEY `index_refinery_blog_posts_on_slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=332 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -169,7 +169,6 @@ CREATE TABLE `refinery_images` (
 
 LOCK TABLES `refinery_images` WRITE;
 /*!40000 ALTER TABLE `refinery_images` DISABLE KEYS */;
-INSERT INTO `refinery_images` VALUES (1,'image/jpeg','DSC_0079.jpg',835116,4288,2848,'2012/08/09/17_32_21_800_DSC_0079.jpg',NULL,'2012-08-09 09:32:21','2012-08-09 09:32:21'),(2,'image/jpeg','shensiwei.jpg',1409273,1360,2048,'2012/08/10/17_43_17_530_shensiwei.jpg',NULL,'2012-08-10 09:43:17','2012-08-10 09:43:17'),(3,'image/jpeg','2012-04-01 15.46.47.jpg',1069845,2592,1944,'2012/08/10/18_01_04_46_2012_04_01_15.46.47.jpg',NULL,'2012-08-10 10:01:04','2012-08-10 10:01:04'),(4,'image/jpeg','2011-07-19 09.43.16.jpg',747142,2592,1944,'2012/08/10/18_09_35_190_2011_07_19_09.43.16.jpg',NULL,'2012-08-10 10:09:35','2012-08-10 10:09:35'),(5,'image/jpeg','bar_camp_group_show.jpg',2893016,2365,1600,'2012/08/13/06_39_10_267_bar_camp_group_show.jpg',NULL,'2012-08-12 22:39:10','2012-08-12 22:39:10'),(6,'image/jpeg','a403844dgw1dvg95jsqm0j.jpg',764874,2048,1360,'2012/08/13/08_43_40_939_a403844dgw1dvg95jsqm0j.jpg',NULL,'2012-08-13 00:43:40','2012-08-13 00:43:40'),(7,'image/jpeg','DSC_0091.JPG',34699,510,767,'2012/08/13/08_48_25_382_DSC_0091.JPG',NULL,'2012-08-13 00:48:25','2012-08-13 00:48:25'),(8,'image/jpeg','siwei-speaking.jpg',48266,488,816,'2012/08/17/10_09_42_318_siwei_speaking.jpg',NULL,'2012-08-17 02:09:42','2012-08-17 02:09:42'),(9,'image/png','siwei_speaking_meta.png',200849,373,368,'2012/08/17/10_14_13_718_siwei_speaking_meta.png',NULL,'2012-08-17 02:14:13','2012-08-17 02:14:13'),(10,'image/gif','fibonacci-spiral.gif',8326,450,280,'2012/08/17/11_04_08_728_fibonacci_spiral.gif',NULL,'2012-08-17 03:04:08','2012-08-17 03:04:08'),(11,'image/gif','tower_of_hanoi.gif',462026,300,117,'2012/08/17/14_09_50_574_tower_of_hanoi.gif',NULL,'2012-08-17 06:09:50','2012-08-17 06:09:50'),(12,'image/jpeg','lightened_logo.jpeg',44487,450,338,'2012/08/22/14_49_37_818_lightened_logo.jpeg',NULL,'2012-08-22 06:49:37','2012-08-22 06:49:37'),(13,'image/gif','Sorting_quicksort_anim.gif',93016,280,214,'2012/08/27/15_11_14_436_Sorting_quicksort_anim.gif',NULL,'2012-08-27 07:11:14','2012-08-27 07:11:14'),(14,'image/jpeg','sql_joins.jpg',73000,485,382,'2012/08/28/15_12_58_548_sql_joins.jpg',NULL,'2012-08-28 07:12:58','2012-08-28 07:12:58'),(15,'image/png','springapp.png',21971,660,479,'2012/09/05/16_31_48_876_springapp.png',NULL,'2012-09-05 08:31:48','2012-09-05 08:31:48'),(16,'image/png','springapp.png',19657,657,476,'2012/09/06/09_38_44_868_springapp.png',NULL,'2012-09-06 01:38:44','2012-09-06 01:38:44'),(17,'image/png','first_commit.PNG',91562,1152,648,'2012/09/20/08_09_04_631_first_commit.PNG',NULL,'2012-09-20 00:09:04','2012-09-20 00:09:04'),(18,'image/png','Jenkins_for_selenium.png',214936,1280,800,'2012/10/11/10_35_04_798_Jenkins_for_selenium.png',NULL,'2012-10-11 02:35:04','2012-10-11 02:35:04'),(19,'image/jpeg','hanfu.jpg',197818,1449,652,'2012/10/11/14_53_44_876_hanfu.jpg',NULL,'2012-10-11 06:53:44','2012-10-11 06:53:44'),(20,'image/png','2222.PNG',11970,581,144,'2012/10/22/05_00_56_612_2222.PNG',NULL,'2012-10-21 21:00:56','2012-10-21 21:00:56'),(21,'image/png','beast_looking.png',55858,1110,450,'2012/10/23/09_50_28_58_beast_looking.png',NULL,'2012-10-23 01:50:28','2012-10-23 01:50:28'),(22,'image/jpeg','saving_video.jpg',16753,340,210,'2012/11/22/17_28_53_969_saving_video.jpg',NULL,'2012-11-22 09:28:53','2012-11-22 09:28:53'),(23,'image/jpeg','convert_command.jpg',99499,1200,409,'2012/11/22/17_29_30_964_convert_command.jpg',NULL,'2012-11-22 09:29:30','2012-11-22 09:29:30'),(24,'image/png','natty_classic_edit1.png',224078,640,479,'2012/12/02/06_40_06_535_natty_classic_edit1.png',NULL,'2012-12-01 22:40:06','2012-12-01 22:40:06'),(25,'image/png','Screenshot-4.png',251270,1280,800,'2013/01/15/17_37_25_78_Screenshot_4.png',NULL,'2013-01-15 09:37:25','2013-01-15 09:37:25'),(26,'image/png','js-error-collapse.png',13563,533,132,'2013/02/21/09_20_51_695_js_error_collapse.png',NULL,'2013-02-21 01:20:51','2013-02-21 01:20:51'),(27,'image/png','js-error-unfold.png',34025,534,269,'2013/02/21/09_21_02_476_js_error_unfold.png',NULL,'2013-02-21 01:21:02','2013-02-21 01:21:02'),(28,'image/png','sound-recording.png',93208,1280,800,'2013/02/27/13_40_14_727_sound_recording.png',NULL,'2013-02-27 05:40:14','2013-02-27 05:40:14'),(29,'image/png','config_audacity_device.png',138541,1280,800,'2013/02/27/13_41_21_134_config_audacity_device.png',NULL,'2013-02-27 05:41:21','2013-02-27 05:41:21'),(30,'image/png','htop.png',121516,1280,800,'2013/05/17/08_31_38_972_htop.png',NULL,'2013-05-17 00:31:38','2013-05-17 00:31:38'),(31,'image/png','form.png',125550,1280,800,'2013/06/03/16_00_05_291_form.png',NULL,'2013-06-03 08:00:05','2013-06-03 08:00:05'),(32,'image/png','form2.png',126801,1280,800,'2013/06/03/16_01_15_992_form2.png',NULL,'2013-06-03 08:01:15','2013-06-03 08:01:15'),(33,'image/png','godday_domain_setting.png',177369,1280,800,'2013/12/05/18_47_12_875_godday_domain_setting.png',NULL,'2013-12-05 10:47:12','2013-12-05 10:47:12'),(34,'image/png','edit_godaddy_zone_file.png',213333,1280,800,'2013/12/05/18_52_19_956_edit_godaddy_zone_file.png',NULL,'2013-12-05 10:52:19','2013-12-05 10:52:19'),(35,'image/png','how_to_implement_stripe_title.png',169207,695,332,'2013/12/12/16_01_02_430_how_to_implement_stripe_title.png',NULL,'2013-12-12 08:01:02','2013-12-12 08:01:02'),(36,'image/png','step1.png',123146,1366,768,'2014/01/07/23_49_06_416_step1.png',NULL,'2014-01-07 23:49:06','2014-01-07 23:49:06'),(37,'image/png','step2.png',150814,1366,768,'2014/01/07/23_49_07_183_step2.png',NULL,'2014-01-07 23:49:07','2014-01-07 23:49:07'),(38,'image/png','step3.png',125137,1366,768,'2014/01/07/23_49_07_616_step3.png',NULL,'2014-01-07 23:49:07','2014-01-07 23:49:07'),(39,'image/png','step5.png',120905,1366,768,'2014/01/07/23_49_08_243_step5.png',NULL,'2014-01-07 23:49:08','2014-01-07 23:49:08'),(40,'image/jpeg','IMG_20140112_194621.jpg',263014,900,1602,'2014/01/12/12_00_55_352_IMG_20140112_194621.jpg',NULL,'2014-01-12 12:00:55','2014-01-12 12:00:55'),(41,'image/png','newly_forked_project.png',186946,1366,768,'2014/01/24/09_10_35_16_newly_forked_project.png',NULL,'2014-01-24 01:10:35','2014-01-24 01:10:35'),(42,'image/png','Screenshot from 2014-01-24 06:59:28.png',185066,1366,768,'2014/01/24/09_10_35_343_Screenshot_from_2014_01_24_06_59_28.png',NULL,'2014-01-24 01:10:35','2014-01-24 01:10:35'),(43,'image/png','first_php.png',14622,375,138,'2014/01/27/14_37_12_611_first_php.png',NULL,'2014-01-27 06:37:12','2014-01-27 06:37:12'),(44,'image/png','fluxbb-finalize-install.png',37205,758,443,'2014/01/27/15_07_30_11_fluxbb_finalize_install.png',NULL,'2014-01-27 07:07:30','2014-01-27 07:07:30'),(45,'image/png','Screenshot from 2014-01-27 15:07:59.png',85435,1280,800,'2014/01/27/15_08_17_20_Screenshot_from_2014_01_27_15_07_59.png',NULL,'2014-01-27 07:08:17','2014-01-27 07:08:17'),(46,'image/png','Screenshot from 2014-01-29 06:07:32.png',122293,1366,768,'2014/01/29/06_14_33_328_Screenshot_from_2014_01_29_06_07_32.png',NULL,'2014-01-28 22:14:33','2014-01-28 22:14:33'),(47,'image/png','create_pull_request_step1.png',95925,1366,768,'2014/01/29/06_17_45_743_create_pull_request_step1.png',NULL,'2014-01-28 22:17:45','2014-01-28 22:17:45'),(48,'image/png','create_pull_request_step2_fill_form.png',113913,1366,768,'2014/01/29/06_17_45_999_create_pull_request_step2_fill_form.png',NULL,'2014-01-28 22:17:46','2014-01-28 22:17:46'),(49,'image/png','godaddy_manage_ssh_key_step1.png',121937,1366,768,'2014/01/29/06_40_21_280_godaddy_manage_ssh_key_step1.png',NULL,'2014-01-28 22:40:21','2014-01-28 22:40:21'),(50,'image/png','godaddy_manage_ssh_key_step2_paste_your_ssh_keys.png',29864,1366,768,'2014/01/29/06_40_21_529_godaddy_manage_ssh_key_step2_paste_your_ssh_keys.png',NULL,'2014-01-28 22:40:21','2014-01-28 22:40:21'),(51,'image/png','godaddy_manage_ssh_key_step3_enable_it.png',82525,1366,768,'2014/01/29/06_40_21_754_godaddy_manage_ssh_key_step3_enable_it.png',NULL,'2014-01-28 22:40:21','2014-01-28 22:40:21'),(52,'image/png','godaddy_manage_ssh_key_step4_done.png',93257,1366,768,'2014/01/29/06_40_21_985_godaddy_manage_ssh_key_step4_done.png',NULL,'2014-01-28 22:40:21','2014-01-28 22:40:21'),(53,'image/png','godaddy_manage_ssh_key_step4_done.png',111469,1366,768,'2014/01/29/06_47_31_83_godaddy_manage_ssh_key_step4_done.png',NULL,'2014-01-28 22:47:31','2014-01-28 22:47:31'),(54,'image/png','Screenshot from 2014-01-29 07:56:46.png',108296,1366,768,'2014/01/29/07_57_38_389_Screenshot_from_2014_01_29_07_56_46.png',NULL,'2014-01-28 23:57:38','2014-01-28 23:57:38'),(55,'image/png','configure_if_comment_should_contain_href_links.png',84792,960,540,'2014/02/16/08_10_33_42_configure_if_comment_should_contain_href_links.png',NULL,'2014-02-16 00:10:33','2014-02-16 00:10:33'),(56,'image/png','yi-lianda.png',52844,417,164,'2014/03/11/06_25_00_162_yi_lianda.png',NULL,'2014-03-10 22:25:00','2014-03-10 22:25:00'),(57,'image/png','yi-lianda-2.png',10684,190,60,'2014/03/11/06_28_55_969_yi_lianda_2.png',NULL,'2014-03-10 22:28:55','2014-03-10 22:28:55'),(58,'image/png','templates.png',399297,1016,572,'2014/03/11/07_13_55_777_templates.png',NULL,'2014-03-10 23:13:55','2014-03-10 23:13:55'),(59,'image/png','Screenshot from 2014-06-06 07:40:12.png',178305,1280,800,'2014/06/06/07_45_23_722_Screenshot_from_2014_06_06_07_40_12.png',NULL,'2014-06-05 23:45:23','2014-06-05 23:45:23'),(60,'image/png','Screenshot from 2014-06-20 10:44:54.png',54512,1280,800,'2014/06/20/10_46_16_528_Screenshot_from_2014_06_20_10_44_54.png',NULL,'2014-06-20 02:46:16','2014-06-20 02:46:16'),(61,'image/png','Screenshot from 2014-07-07 16:44:20.png',136254,1280,800,'2014/07/07/17_09_51_221_Screenshot_from_2014_07_07_16_44_20.png',NULL,'2014-07-07 09:09:51','2014-07-07 09:09:51'),(62,'image/png','Screenshot from 2014-07-07 17:01:24.png',333224,1280,800,'2014/07/07/17_10_15_386_Screenshot_from_2014_07_07_17_01_24.png',NULL,'2014-07-07 09:10:15','2014-07-07 09:10:15'),(63,'image/png','Screenshot from 2014-07-07 16:45:18.png',151590,1280,800,'2014/07/07/17_10_25_216_Screenshot_from_2014_07_07_16_45_18.png',NULL,'2014-07-07 09:10:25','2014-07-07 09:10:25'),(64,'image/png','战五渣.png',277388,653,719,'2014/07/26/19_00_09_236__.png',NULL,'2014-07-26 11:00:09','2014-07-26 11:00:09'),(65,'image/png','Screenshot from 2014-08-07 13:33:25.png',81305,1280,800,'2014/08/07/13_34_19_353_Screenshot_from_2014_08_07_13_33_25.png',NULL,'2014-08-07 05:34:19','2014-08-07 05:34:19');
 /*!40000 ALTER TABLE `refinery_images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -190,7 +189,7 @@ CREATE TABLE `refinery_page_part_translations` (
   PRIMARY KEY (`id`),
   KEY `index_refinery_page_part_translations_on_locale` (`locale`),
   KEY `index_f9716c4215584edbca2557e32706a5ae084a15ef` (`refinery_page_part_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -221,7 +220,7 @@ CREATE TABLE `refinery_page_parts` (
   PRIMARY KEY (`id`),
   KEY `index_refinery_page_parts_on_id` (`id`),
   KEY `index_refinery_page_parts_on_refinery_page_id` (`refinery_page_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,7 +253,7 @@ CREATE TABLE `refinery_page_translations` (
   PRIMARY KEY (`id`),
   KEY `index_refinery_page_translations_on_locale` (`locale`),
   KEY `index_d079468f88bff1c6ea81573a0d019ba8bf5c2902` (`refinery_page_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,7 +297,7 @@ CREATE TABLE `refinery_pages` (
   KEY `index_refinery_pages_on_lft` (`lft`),
   KEY `index_refinery_pages_on_parent_id` (`parent_id`),
   KEY `index_refinery_pages_on_rgt` (`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -337,7 +336,6 @@ CREATE TABLE `refinery_resources` (
 
 LOCK TABLES `refinery_resources` WRITE;
 /*!40000 ALTER TABLE `refinery_resources` DISABLE KEYS */;
-INSERT INTO `refinery_resources` VALUES (1,'image/jpeg','cake.JPG',15757,'2012/08/09/17_31_46_193_cake.JPG',NULL,'2012-08-09 09:31:46','2012-08-09 09:31:46'),(2,'application/vnd.oasis.opendocument.presentation','Meta Programming Ruby.odp',662371,'2012/08/10/13_43_56_81_Meta_Programming_Ruby.odp',NULL,'2012-08-10 05:43:56','2012-08-10 05:43:56'),(3,'image/jpeg','taoge.jpg',36296,'2012/08/10/13_44_17_716_taoge.jpg',NULL,'2012-08-10 05:44:17','2012-08-10 05:44:17'),(4,'application/vnd.oasis.opendocument.presentation','unit_tests_in_ruby.odp',81699,'2012/08/10/13_59_13_156_unit_tests_in_ruby.odp',NULL,'2012-08-10 05:59:13','2012-08-10 05:59:13'),(5,'image/jpeg','DSC_0090.JPG',33315,'2012/08/10/14_13_10_192_DSC_0090.JPG',NULL,'2012-08-10 06:13:10','2012-08-10 06:13:10'),(6,'image/jpeg','DSC_0094.JPG',80100,'2012/08/10/14_13_25_557_DSC_0094.JPG',NULL,'2012-08-10 06:13:25','2012-08-10 06:13:25'),(7,'application/pdf','spells.pdf',182797,'2012/08/10/14_13_57_530_spells.pdf',NULL,'2012-08-10 06:13:57','2012-08-10 06:13:57'),(9,'image/jpeg','shensiwei.jpg',1409273,'2012/08/10/17_42_40_499_shensiwei.jpg',NULL,'2012-08-10 09:42:40','2012-08-10 09:42:40'),(10,'application/pdf','meta_programming_ruby.pdf',211047,'2012/08/11/10_21_34_837_meta_programming_ruby.pdf',NULL,'2012-08-11 02:21:34','2012-08-11 02:21:34'),(11,'application/vnd.oasis.opendocument.presentation','meta_programming_ruby.odp',970917,'2012/08/11/10_22_12_141_meta_programming_ruby.odp',NULL,'2012-08-11 02:22:12','2012-08-11 02:22:12'),(12,'application/vnd.ms-powerpoint','meta_programming_ruby.ppt',1136640,'2012/08/11/10_22_23_487_meta_programming_ruby.ppt',NULL,'2012-08-11 02:22:23','2012-08-11 02:22:23'),(13,'audio/mpeg','1-20120811-meta ruby programming.mp3',5859190,'2012/08/15/06_57_22_146_1_20120811_meta_ruby_programming.mp3',NULL,'2012-08-14 22:57:22','2012-08-14 22:57:22'),(14,'application/zip','babble_portal_0816.sql.zip',17410415,'2012/08/16/10_20_20_246_babble_portal_0816.sql.zip',NULL,'2012-08-16 02:20:20','2012-08-16 02:20:20'),(15,'application/zip','arkitek.zip',18935095,'2012/08/16/10_23_55_610_arkitek.zip',NULL,'2012-08-16 02:23:56','2012-08-16 02:23:56'),(16,'application/zip','babble_portal_0816.zip',51795127,'2012/08/16/10_31_01_435_babble_portal_0816.zip',NULL,'2012-08-16 02:31:03','2012-08-16 02:31:03'),(17,'image/png','selenium_test_suite_result.png',184340,'2012/09/20/16_22_49_424_selenium_test_suite_result.png',NULL,'2012-09-20 08:22:49','2012-09-20 08:22:49'),(18,'image/jpeg','hanfu.jpg',197818,'2012/10/11/14_55_24_703_hanfu.jpg',NULL,'2012-10-11 06:55:24','2012-10-11 06:55:24'),(19,'application/pdf','30_seconds_to_know_Siwei.pdf',3315640,'2012/10/15/18_08_08_246_30_seconds_to_know_Siwei.pdf',NULL,'2012-10-15 10:08:08','2012-10-15 10:08:08'),(20,'application/vnd.oasis.opendocument.presentation','30_seconds_to_know_Siwei.odp',2703562,'2012/10/16/08_24_41_841_30_seconds_to_know_Siwei.odp',NULL,'2012-10-16 00:24:41','2012-10-16 00:24:41'),(21,'application/pdf','30_seconds_to_know_Siwei_for_Chargify.pdf',689622,'2012/10/18/11_53_41_340_30_seconds_to_know_Siwei_for_Chargify.pdf',NULL,'2012-10-18 03:53:41','2012-10-18 03:53:41'),(22,'application/vnd.oasis.opendocument.presentation','ruby_introduction.odp',640976,'2012/12/07/06_02_57_914_ruby_introduction.odp',NULL,'2012-12-06 22:02:57','2012-12-06 22:02:57'),(23,'application/vnd.oasis.opendocument.presentation','ruby-intro-on-railsgrils.odp',437550,'2012/12/21/11_41_28_406_ruby_intro_on_railsgrils.odp',NULL,'2012-12-21 03:41:28','2012-12-21 03:41:28'),(24,'audio/mpeg','你一定要幸福.mp3',5027597,'2013/02/07/18_34_55_131__.mp3',NULL,'2013-02-07 10:34:55','2013-02-07 10:34:55'),(25,'video/mp4','20130610_110219.mp4',61829304,'2013/06/10/21_24_31_289_20130610_110219.mp4',NULL,'2013-06-10 13:24:33','2013-06-10 13:24:33'),(26,'video/mp4','father_day_gift.mp4',27552412,'2013/06/26/13_42_41_254_father_day_gift.mp4',NULL,'2013-06-26 05:42:41','2013-06-26 05:42:41'),(27,'text/plain','.vimrc',4993,'2014/01/19/05_51_38_665_.vimrc',NULL,'2014-01-19 05:51:38','2014-01-19 05:51:38'),(28,'text/plain','原则.txt',1958,'2014/01/26/07_07_19_411__.txt',NULL,'2014-01-25 23:07:19','2014-01-25 23:07:19'),(29,'application/pdf','演讲-2014-07-13-barcamp-软件项目生存指南.pdf',420926,'2014/07/20/21_11_59_672__2014_07_13_barcamp_.pdf',NULL,'2014-07-20 13:11:59','2014-07-20 13:11:59'),(30,'application/pdf','如何接手腐朽项目.pdf',288512,'2014/08/01/16_21_56_131__.pdf',NULL,'2014-08-01 08:21:56','2014-08-01 08:21:56');
 /*!40000 ALTER TABLE `refinery_resources` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -437,7 +435,7 @@ CREATE TABLE `refinery_user_plugins` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_refinery_user_plugins_on_user_id_and_name` (`user_id`,`name`),
   KEY `index_refinery_user_plugins_on_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -446,7 +444,7 @@ CREATE TABLE `refinery_user_plugins` (
 
 LOCK TABLES `refinery_user_plugins` WRITE;
 /*!40000 ALTER TABLE `refinery_user_plugins` DISABLE KEYS */;
-INSERT INTO `refinery_user_plugins` VALUES (17,1,'refinerycms_blog',0),(18,1,'refinery_dashboard',1),(19,1,'refinery_files',2),(20,1,'refinery_images',3),(21,1,'refinery_pages',4),(22,1,'refinery_settings',5),(23,1,'refinery_users',6);
+INSERT INTO `refinery_user_plugins` VALUES (44,1,'refinery_dashboard',0),(45,1,'refinery_images',1),(46,1,'refinery_files',2),(47,1,'refinery_users',3),(48,1,'refinery_pages',4),(49,1,'refinery_core',5),(50,1,'refinery_dialogs',6),(51,1,'refinery_i18n',7),(52,1,'refinery_settings',8),(53,1,'refinerycms_blog',9);
 /*!40000 ALTER TABLE `refinery_user_plugins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -483,7 +481,7 @@ CREATE TABLE `refinery_users` (
 
 LOCK TABLES `refinery_users` WRITE;
 /*!40000 ALTER TABLE `refinery_users` DISABLE KEYS */;
-INSERT INTO `refinery_users` VALUES (1,'admin','admin@youremail.com','$2a$10$vwLzoYPqHl493xxqwDh6v.BsHNcmBGqxUGkSt7uK8x.tIyQsJWSy2','2016-09-19 06:20:59','2014-09-08 00:29:09','14.49.36.61','106.186.19.73',227,'2014-08-29 06:06:18',NULL,NULL,'2012-08-04 06:51:38','2016-09-19 06:23:49');
+INSERT INTO `refinery_users` VALUES (1,'admin','admin@youremail.com','$2a$10$vwLzoYPqHl493xxqwDh6v.BsHNcmBGqxUGkSt7uK8x.tIyQsJWSy2','2016-10-15 14:14:03','2016-09-19 06:20:59','127.0.0.1','14.49.36.61',228,'2014-08-29 06:06:18',NULL,NULL,'2012-08-04 06:51:38','2016-10-15 14:14:03');
 /*!40000 ALTER TABLE `refinery_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -607,4 +605,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-19 14:24:09
+-- Dump completed on 2016-10-15 22:22:27
