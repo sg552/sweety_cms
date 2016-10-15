@@ -1,36 +1,41 @@
-== siwei.me
+== 名字
 
-This is source code for siwei.me, based on Refinery CMS. (http://refinerycms.com/)
+Sweety CMS.  基于refinery的内容管理系统.
 
-== Setup
+Refinery 很强大, 但是抽象的过分复杂了.
 
-1. $ git clone  git@github.com:sg552/siwei.me.git
-2. $ cd siwei.me
+本项目把refinery的各种gem 都合并到了一起(在一定程度上)
+
+功能包括:
+
+1. blog
+2. cms
+3. 评论
+4. 上传文件
+
+
+== 安装
+
+1. $ git clone  git@github.com:sg552/sweety_cms.git
+2. $ cd sweety_cms
 3. $ bundle install
-4. $ cp and edit these files:  config folder's : log4r.yml, database.yml, thin.yml
+4. $ 把下列文件都配置好:
+   $ config 目录下的log4r.yml, database.yml, thin.yml
 5. $ bundle exec rake db:create RAILS_ENV=production
-6. $ (in your mysql) source db/initial_data.sql
-7. $ bundle exec thin start -p 3888 -e production -d (or  -C config/thin.yml)
-8. edit config/initializers/blog.rb, core.rb to modify the site titles
+6. $ (mysql中 ) source db/initial_data.sql
+7. $ 正常启动rails即可:  bundle exec thin start -p 3888 -e production -d (or  -C config/thin.yml)
+8. 如果要修改网站的标题,就修改:config/initializers/blog.rb, core.rb
 
 then visit http://localhost:3888/refinery to login,
 
-default user: admin
-
-default password: 88888888
+默认用户名: admin
+默认密码 : 88888888
 
 Have fun!
 
-== Why a seperated repo?
+== 欢迎贡献代码! (仅限于bug)
 
-Refinery is highly abstracted, which contains 5+ gems and very hard to understand.
 
-I want to make it easy to be maintained or understood.
-
-== Contribute
-
-Just fork and push and send me your pull request.
-
-== Contacts
+== 联系我们
 
 see: http://siwei.me
